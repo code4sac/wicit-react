@@ -1,5 +1,5 @@
 {
-  "name": "react-boiler-with-sass",
+  "name": "wicit",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,7 +29,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "This project is a remake of Code4Sac's WICit app",
   "main": "index.js",
   "devDependencies": {},
   "author": "Eddie Chu",
