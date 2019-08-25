@@ -1,0 +1,1 @@
+export const API_GOOGLE_MAPS = process.env.REACT_APP_API_GOOGLE_MAPS;

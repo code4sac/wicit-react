@@ -13,4 +13,15 @@
         align-items: center;
         padding: .4rem;
     }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+            color: $black-1;
+        }
+    }
 }
