@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "../SearchBar";
+import InfoContainer from '../InfoContainer';
 
 export default function Main() {
     return (
@@ -8,7 +9,7 @@ export default function Main() {
                 <SearchBar />
             </section>
             <section className="info-container" >
-                
+                <InfoContainer />
             </section>
         </main>
     );
