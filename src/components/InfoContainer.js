@@ -1,30 +1,33 @@
 import React from 'react';
-import InfoCard from '../components/InfoCard';
-import cart from '../assets/cart.png';
-import pregnant from '../assets/pregnant.png';
-import phone from '../assets/phone.png';
 
 const writeUp = {
-    card1: {
-        heading: "What is WIC?",
-        description: "WIC is a federally-funded health and nutrition program for women, infants, and children. WIC helps families by providing checks for buying healthy supplemental foods from WIC-authorized vendors, nutrition education, and help finding healthcare and other community services."
+    main_heading: "Resources",
+    heading: "Farmers' Markets",
+    description: "WIC offers two programs to help you buy fruits and vegetables at your local farmers' market.",
+    block1: {
+        title: "Farmers' Market Nutrition Program (FMNP)",
+        summary: "The Farmers' Market Nutrition Program (FMNP) is funded by the U.S. Department of Agriculture (USDA) to provide fresh, nutritious, locally grown fruits and vegetables from farmers' markets to WIC families and seniors. Each eligible WIC family or senior receives $20 in checks each season to purchase fresh fruits, vegetables, and cut herbs from a WIC authorized farmer at WIC authorized market in California."
     },
-    card2: {
-        heading: "Who is WIC for?",
-        description: "Women who are pregnant, breastfeeding, or just had a baby. Children under 5 years old (including foster children). Families with low to medium income (working families may qualify)."
-    },
-    card3: {
-        heading: "Get Started with WIC!",
-        description: "Call 1-888-WIC-WORKS to talk to a WIC staff member who can help you find your local WIC office. Check out California's offical WIC site for more official information about WIC."
+    block2: {
+        title: "WIC Fruit & Vegetable Checks (FVC)",
+        summary: "In October 2009, fruit and vegetables were added to the WIC food package for participants to purchase at authorized grocery stores. In May 2010 the first farmers' market was authorized to accept WIC fruit and vegetable checks. Since 2010, over 200 farmers and 35 markets have been authorized to accept the fruit and vegetable checks. For the list of authorized farmers and markets please see WIC's Authorized Farmer & Market Lists ."
     }
-}
+};
 
 export default function InfoContainer() {
     return (
-        <>
-            <InfoCard image={cart} alt={writeUp.card1.heading} title={writeUp.card1.heading} description={writeUp.card1.description} />
-            <InfoCard image={pregnant} alt={writeUp.card2.heading} title={writeUp.card2.heading} description={writeUp.card2.description} />
-            <InfoCard image={phone} alt={writeUp.card3.heading} title={writeUp.card3.heading} description={writeUp.card3.description} />
-        </>
+        <section className="info-container">
+            <h2 className="heading-secondary u-center-text">{writeUp.main_heading}</h2>
+            <div className="info-container__heading">
+                <h2 className="heading-tertiary">{writeUp.heading}</h2>
+                <p className="paragraph">{writeUp.description}</p>
+            </div>
+            <div className="info-container__content">
+                <h3 className="heading-quat">{writeUp.block1.title}</h3>
+                <p className="paragraph">{writeUp.block1.summary}</p>
+                <h3 className="heading-quat">{writeUp.block2.title}</h3>
+                <p className="paragraph">{writeUp.block2.summary}</p>
+            </div>
+        </section>
     );
 }

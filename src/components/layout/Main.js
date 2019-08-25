@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "../SearchBar";
+import CardContainer from '../CardContainer';
 import InfoContainer from '../InfoContainer';
 
 export default function Main() {
@@ -8,12 +9,8 @@ export default function Main() {
             <section className="main-container" role="form">
                 <SearchBar />
             </section>
-            <section className="card-container" >
-                <InfoContainer />
-            </section>
-            <section className="info-container">
-                
-            </section>
+            <CardContainer />
+            <InfoContainer />
         </main>
     );
 }
