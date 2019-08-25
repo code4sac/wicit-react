@@ -8,8 +8,11 @@ export default function Main() {
             <section className="main-container" role="form">
                 <SearchBar />
             </section>
-            <section className="info-container" >
+            <section className="card-container" >
                 <InfoContainer />
+            </section>
+            <section className="info-container">
+                
             </section>
         </main>
     );
