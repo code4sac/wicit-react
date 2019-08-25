@@ -5,9 +5,11 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "components/component";
+@import "components/button";
+@import "components/search-bar";
 
 @import "layout/footer";
 @import "layout/header";
+@import "layout/main-container";
 
 @import "pages/home";
