@@ -30,7 +30,7 @@ export class GoogleMap extends React.Component {
             : null;
 
         return (
-            <Map google={this.props.google} zoom={14} style={mapStyles} initialCenter={this.props.mapCenter}>
+            <Map google={this.props.google} zoom={13} style={mapStyles} initialCenter={this.props.mapCenter}>
                 {markers ? markers : null}
             </Map>
         );

@@ -7,7 +7,7 @@ export default function Main() {
     return (
         <main role="main">
             <section className="main-container" role="form">
-                <SearchBar />
+                <SearchBar title="Find WIC Stores" />
             </section>
             <CardContainer />
             <InfoContainer />

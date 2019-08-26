@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            address: "",
+            address: null,
             coordinates: null
         };
     }
@@ -56,7 +56,9 @@ class SearchBar extends React.Component {
                 <PlacesAutocomplete value={this.state.address} onChange={this.handleChange} onSelect={this.handleSelect}>
                     {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                         <>
-                            <label className="search-form__label" htmlFor="search">Find WIC Stores</label>
+                            <label className="search-form__label" htmlFor="search">
+                                {this.props.title}
+                            </label>
 
                             <input
                                 id="search"
@@ -78,7 +80,7 @@ class SearchBar extends React.Component {
                         </>
                     )}
                 </PlacesAutocomplete>
-                <button className="search-form__button btn btn--orange" type="submit">
+                <button className="search-form__button btn btn--orange" type="submit" disabled={!this.state.coordinates}>
                     Find Store
                 </button>
             </form>
