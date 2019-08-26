@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "../SearchBar";
-import CardContainer from '../CardContainer';
-import InfoContainer from '../InfoContainer';
+import CardContainer from "../CardContainer";
+import InfoContainer from "../InfoContainer";
 
 export default function Main() {
     return (

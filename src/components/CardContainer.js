@@ -1,8 +1,8 @@
-import React from 'react';
-import InfoCard from './InfoCard';
-import cart from '../assets/cart.png';
-import pregnant from '../assets/pregnant.png';
-import phone from '../assets/phone.png';
+import React from "react";
+import InfoCard from "./InfoCard";
+import cart from "../assets/cart.png";
+import pregnant from "../assets/pregnant.png";
+import phone from "../assets/phone.png";
 
 const writeUp = {
     card1: {
@@ -17,7 +17,7 @@ const writeUp = {
         heading: "Get Started with WIC!",
         description: "Call 1-888-WIC-WORKS to talk to a WIC staff member who can help you find your local WIC office. Check out California's offical WIC site for more official information about WIC."
     }
-}
+};
 
 export default function CardContainer() {
     return (
