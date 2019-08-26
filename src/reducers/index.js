@@ -1,4 +1,4 @@
-import { } from '../actions';
+import { SET_MAP_CENTER } from '../actions';
 import seeddata from '../seeddata';
 
 const initialState = {
@@ -11,5 +11,10 @@ const initialState = {
 
 export const Reducer = (state = initialState, action) => {
 
+    if (action.type === SET_MAP_CENTER) {
+        return Object.assign({}, state, {
+            mapCenter: action.coordinates
+        });
+    }
     return state;
 };

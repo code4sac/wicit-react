@@ -11,9 +11,6 @@ const mapStyles = {
 };
 
 export class GoogleMap extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         let markers = this.props.vendors
@@ -50,3 +47,4 @@ const WrappedContainer = GoogleApiWrapper({
 })(GoogleMap);
 
 export default connect(mapStateToProps)(WrappedContainer);
+// export default connect(mapStateToProps)(GoogleMap);
