@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            address: null,
+            address: '',
             coordinates: null
         };
     }
@@ -34,6 +34,7 @@ class SearchBar extends React.Component {
         e.preventDefault();
         this.props.handleLocation(this.state.coordinates);
         this.props.history.push("/vendor");
+        localStorage.setItem("coordinates", this.state.coordinates);
     }
 
     handleChange = address => {
