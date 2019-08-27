@@ -19,9 +19,10 @@ class SearchBar extends React.Component {
 
     handleLocation = e => {
         e.preventDefault();
-        this.props.handleLocation(this.state.coordinates);
-        this.props.history.push("/vendor");
+        this.props.handleLocation(this.state.address, this.state.coordinates);
+        this.props.history.push(`/vendor/${this.state.address}`);
         localStorage.setItem("coordinates", JSON.stringify(this.state.coordinates));
+        localStorage.setItem("address", JSON.stringify(this.state.address));
     }
 
     handleChange = address => {
@@ -78,13 +79,18 @@ class SearchBar extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleLocation: coordinates => {
-            dispatch(setMapCenter(coordinates));
+        handleLocation: (address, coordinates) => {
+            dispatch(setMapCenter(address, coordinates));
         }
     };
 };
 
+const mapStateToProps = state => ({
+    vendors: state.app.vendors,
+    mapCenter: state.app.mapCenter
+});
+
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(withRouter(SearchBar));

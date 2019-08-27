@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from '../layout/Header';
+import LocationBar from '../LocationBar';
 import logo from '../../assets/logo.png';
 
 import WrappedContainer from '../GoogleMap';
@@ -12,6 +13,7 @@ export default class Vendor extends React.Component {
             <>
                 <Header logo={logo} alt="WICit logo" heading="WICit" />
                 <main>
+                    <LocationBar />
                     <WrappedContainer />
                 </main>
             </>

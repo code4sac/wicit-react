@@ -1,5 +1,6 @@
 export const SET_MAP_CENTER = "SET_MAP_CENTER";
-export const setMapCenter = coordinates => ({
+export const setMapCenter = (address, coordinates) => ({
     type: SET_MAP_CENTER,
-    coordinates
+    address,
+    coordinates,
 });

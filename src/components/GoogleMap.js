@@ -11,6 +11,7 @@ const mapStyles = {
 };
 
 export class GoogleMap extends React.Component {
+    
     render() {
         let markers = this.props.vendors
             ? this.props.vendors.map((vendor, index) => {
@@ -30,7 +31,7 @@ export class GoogleMap extends React.Component {
             : null;
 
         return (
-            <Map google={this.props.google} zoom={13} style={mapStyles} initialCenter={this.props.mapCenter}>
+            <Map google={this.props.google} zoom={13} style={mapStyles} initialCenter={this.props.mapCenter} center={this.props.mapCenter} >
                 {markers ? markers : null}
             </Map>
         );
