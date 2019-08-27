@@ -3,7 +3,7 @@ import seeddata from "../seeddata";
 
 const initialState = {
     vendors: seeddata.vendorsList,
-    mapCenter: localStorage.getItem("coordinates") || {
+    mapCenter: JSON.parse(localStorage.getItem("coordinates")) || {
         lat: 38.5816,
         lng: -121.4944
     }

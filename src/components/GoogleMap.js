@@ -23,7 +23,8 @@ export class GoogleMap extends React.Component {
                               lng: vendor.Longitude
                           }}
                           onClick={() => console.log("You clicked me!")}
-                      />
+                      >
+                      </Marker>
                   );
               })
             : null;

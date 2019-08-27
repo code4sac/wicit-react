@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
         e.preventDefault();
         this.props.handleLocation(this.state.coordinates);
         this.props.history.push("/vendor");
-        localStorage.setItem("coordinates", this.state.coordinates);
+        localStorage.setItem("coordinates", JSON.stringify(this.state.coordinates));
     }
 
     handleChange = address => {
