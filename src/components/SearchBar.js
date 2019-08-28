@@ -23,6 +23,10 @@ class SearchBar extends React.Component {
         this.props.history.push(`/vendor/${this.state.address}`);
         localStorage.setItem("coordinates", JSON.stringify(this.state.coordinates));
         localStorage.setItem("address", JSON.stringify(this.state.address));
+
+        if (this.props.onClick) {
+            this.props.onClick();
+        }
     }
 
     handleChange = address => {
