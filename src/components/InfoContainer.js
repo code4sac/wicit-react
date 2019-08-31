@@ -17,6 +17,7 @@ const writeUp = {
 export default function InfoContainer() {
     return (
         <section className="info-container">
+            <div className="info-container__main">
             <h2 className="heading-secondary u-center-text">{writeUp.main_heading}</h2>
             <div className="info-container__heading">
                 <h2 className="heading-tertiary">{writeUp.heading}</h2>
@@ -27,6 +28,7 @@ export default function InfoContainer() {
                 <p className="paragraph">{writeUp.block1.summary}</p>
                 <h3 className="heading-quat">{writeUp.block2.title}</h3>
                 <p className="paragraph">{writeUp.block2.summary}</p>
+            </div>
             </div>
         </section>
     );

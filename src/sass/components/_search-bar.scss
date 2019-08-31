@@ -5,10 +5,11 @@
     flex-direction: column;
     align-items: center;
     margin: 4rem auto 0 auto;
+    max-width: 60rem;
 
-    @media screen and (min-width: 1180px) {
-        width: 25%;
-    }
+    // @media screen and (min-width: 1180px) {
+    //     width: 50%;
+    // }
 
     &__label {
         width: 100%;
