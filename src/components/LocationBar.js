@@ -22,7 +22,7 @@ class LocationBar extends React.Component {
     render() {
         return (
             <div className="location-bar">
-                <h2 className="location-bar__heading">{this.props.address}</h2>
+                <h2 className="location-bar__heading u-font-small">{this.props.address}</h2>
                 <button className="location-bar__button" onClick={() => this.setState({ toggle: !this.state.toggle })}></button>
                 {this.state.toggle ? (
                     <div className="search-container">

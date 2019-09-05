@@ -7,7 +7,7 @@ export default function Header(props) {
             <nav className="header__content">
                 <Link to="/" className="header__link">
                     <img className="logo" src={props.logo} alt={props.alt} />
-                    <h1 className="heading-primary">{props.heading}</h1>
+                    <h1 className="heading-primary u-font-medium">{props.heading}</h1>
                 </Link>
             </nav>
         </header>

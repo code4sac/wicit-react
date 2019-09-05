@@ -18,7 +18,7 @@ export default function InfoContainer() {
     return (
         <section className="info-container">
             <div className="info-container__main">
-            <h2 className="heading-secondary u-center-text">{writeUp.main_heading}</h2>
+            <h2 className="heading-secondary u-center-text u-font-large">{writeUp.main_heading}</h2>
             <div className="info-container__heading">
                 <h2 className="heading-tertiary">{writeUp.heading}</h2>
                 <p className="paragraph">{writeUp.description}</p>
