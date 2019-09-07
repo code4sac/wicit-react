@@ -14,4 +14,12 @@
             background-color: lighten($orange-1, 23%);
         }
     }
+
+    &--red {
+        background-color: $red-1;
+
+        &:hover {
+            background-color: darken($red-1, 5%);
+        }
+    }
 }

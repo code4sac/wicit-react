@@ -19,10 +19,21 @@ class SearchBar extends React.Component {
 
     handleLocation = e => {
         e.preventDefault();
-        this.props.handleLocation(this.state.address, this.state.coordinates);
-        this.props.history.push(`/vendor/${this.state.address}`);
-        localStorage.setItem("coordinates", JSON.stringify(this.state.coordinates));
-        localStorage.setItem("address", JSON.stringify(this.state.address));
+        if (this.state.address === '' && this.state.coordinates === null) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    this.props.handleLocation("Current Location", {lat: position.coords.latitude , lng: position.coords.longitude});
+                    this.props.history.push(`/vendor/current_location`);
+                });
+            }
+        }
+        else {
+            console.log(this.state.coordinates)
+            this.props.handleLocation(this.state.address, this.state.coordinates);
+            this.props.history.push(`/vendor/${this.state.address}`);
+            localStorage.setItem("coordinates", JSON.stringify(this.state.coordinates));
+            localStorage.setItem("address", JSON.stringify(this.state.address));
+        }
 
         if (this.props.onClick) {
             this.props.onClick();
@@ -73,8 +84,11 @@ class SearchBar extends React.Component {
                         </>
                     )}
                 </PlacesAutocomplete>
-                <button className="search-form__button btn btn--orange" type="submit" disabled={!this.state.coordinates}>
+                <button className="search-form__button btn btn--orange u-margin-bottom-small" type="submit" disabled={!this.state.coordinates}>
                     Find Store
+                </button>
+                <button className="search-form__button btn btn--red" type="submit">
+                    Use My Location
                 </button>
             </form>
         );
