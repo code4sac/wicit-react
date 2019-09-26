@@ -24,6 +24,14 @@ class SearchBar extends React.Component {
                 navigator.geolocation.getCurrentPosition(position => {
                     this.props.handleLocation("Current Location", {lat: position.coords.latitude , lng: position.coords.longitude});
                     this.props.history.push(`/vendor/current_location`);
+                    localStorage.setItem(
+                        "coordinates",
+                        JSON.stringify({ lat: position.coords.latitude, lng: position.coords.longitude })
+                    );
+                    localStorage.setItem(
+                        "address",
+                        JSON.stringify({ lat: position.coords.latitude, lng: position.coords.longitude })
+                    );
                 });
             }
         }
