@@ -5,7 +5,6 @@ import LocationBar from '../LocationBar';
 import logo from '../../assets/logo.png';
 
 import WrappedContainer from '../GoogleMap';
-import GoogleMap from '../GoogleMap';
 
 export default class Vendor extends React.Component {
     render() {
@@ -15,6 +14,7 @@ export default class Vendor extends React.Component {
                 <main>
                     <LocationBar />
                     <WrappedContainer />
+                    
                 </main>
             </>
         );
